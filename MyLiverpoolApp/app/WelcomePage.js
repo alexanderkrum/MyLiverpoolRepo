@@ -3,9 +3,9 @@ import {StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
 function WelcomeApp ({ navigation }) {
     return (
         <View style={styles.background}> 
-            <Image source={require('../assets/welcomeBackground.png')} style={styles.image}/>
+            <Image source={require('../assets/logos/welcomeBackground.png')} style={styles.image}/>
             <View style={styles.logo}>
-                <Image source={require('../assets/logo.png')}/>
+                <Image source={require('../assets/logos/logo.png')}/>
             </View>
             <View style={styles.btn}>
                 <TouchableOpacity  
