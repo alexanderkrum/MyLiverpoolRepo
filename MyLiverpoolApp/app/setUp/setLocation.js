@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {View, Text, StyleSheet, Dimensions, TouchableOpacity} from 'react-native';
 import * as Location from 'expo-location';
+import SetUpButton from '../../components/setUpButtonComponent';
 
 function SetLocation({ navigation }) {
 
@@ -41,7 +42,8 @@ function SetLocation({ navigation }) {
                     onPress={allowLocation} 
                     onPressIn={() => navigation.navigate('enableNotifications')}
                     >
-                        <Text style={styles.buttonText}>Share</Text>
+                        {/*<Text style={styles.buttonText}>Share</Text>*/}
+                        <SetUpButton buttonName={'Share'} />
                     </TouchableOpacity>
                 </View>
                 {/*<Text>{JSON.stringify(location)}</Text>*/}
@@ -102,18 +104,8 @@ const styles = StyleSheet.create({
     addLocation: {
         flex: 2,
     },
-    addLocationButton: {
-        backgroundColor: '#5C348B',
-        height: RPH(6),
-        width: RPW(40),
-        justifyContent: 'center',
-        alignItems: 'center',
-        
-    },
     buttonText: {
-        color: '#FFFFFF',
-        fontSize: RPH(2),
-        fontWeight: '600'
+        
     },
     addLater: {
         flex: 0.6,
