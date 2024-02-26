@@ -42,7 +42,6 @@ function SetLocation({ navigation }) {
                     onPress={allowLocation} 
                     onPressIn={() => navigation.navigate('enableNotifications')}
                     >
-                        {/*<Text style={styles.buttonText}>Share</Text>*/}
                         <SetUpButton buttonName={'Share'} />
                     </TouchableOpacity>
                 </View>
@@ -103,9 +102,6 @@ const styles = StyleSheet.create({
     },
     addLocation: {
         flex: 2,
-    },
-    buttonText: {
-        
     },
     addLater: {
         flex: 0.6,
