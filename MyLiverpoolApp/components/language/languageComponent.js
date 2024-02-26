@@ -18,8 +18,7 @@ function LanguageButton({ lang, onPress}) {
                     style={
                         item.value === userLang ? styles.selected : styles.unselected
                     }
-                    onPress={() => {setLanguage()}}
-                    onPressOut={onPress}>
+                    onPress={() => {setLanguage()}}>
                             <Text style={styles.option}> 
                                 <Text style={item.value === userLang ? styles.whiteFont : styles.unselected}>
                                     {item.value}
@@ -44,24 +43,22 @@ const RPW = percentage => {
 
 const styles = StyleSheet.create({
     option: {
-        height: RPH(7),
-        width: RPW(50),
+        height: RPH(8),
+        width: RPW(70),
         fontWeight: '600',
-        fontSize: RPH(2),
+        fontSize: RPH(2.4),
         color: '#5C348B',
         marginTop: RPH(1.5),
-        marginLeft: RPH(1.5)
-    },
-    unselected: {
-        borderRadius: 20,
+        paddingTop: RPH(1),
+        paddingBottom: RPH(1),
+        paddingLeft: RPW(4),
     },
     selected: {
-        borderRadius: 20,
         backgroundColor: '#5C348B',
     },
     whiteFont: {
-        color: '#FFFFFF'
-    }
+        color: '#FFFFFF',
+    },
 });
 
 export default LanguageButton;
