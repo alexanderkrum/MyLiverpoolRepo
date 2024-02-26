@@ -17,12 +17,15 @@ function SelectLanguage({ navigation }) {
             <View style={styles.title}>
                 <Text style={styles.titleTxt}>Select Your{'\n'}Preferred{'\n'}Language</Text>
             </View>
-            <View style={styles.text}>
-                <Text style={styles.textTxt}>This can always be{'\n'}changed later</Text>
-            </View>
             <View style={styles.langContainer}>
-                <LanguageButton style={styles.lang} lang={lang} onPress={() => navigation.navigate('setLocation')}/>
-
+                <LanguageButton  lang={lang} />
+            </View>
+            <View style={styles.text}>
+                <Text 
+                style={styles.textTxt}
+                onPress={() => navigation.navigate('setLocation')}>
+                    Continue →
+                </Text>
             </View>
         </View>
     );
@@ -65,26 +68,20 @@ const styles = StyleSheet.create({
         //backgroundColor: 'red',
     },
     textTxt: {
-        fontStyle: 'italic',
         fontWeight: '600',
-        fontSize: RPH(2),
+        fontSize: RPH(2.5),
         textAlign: 'center',
         color: '#2E3B43',
     },
     langContainer: {
         flex: 6.5,
-        borderColor: '#5C348B',
-        borderWidth: 3,
-        borderRadius: 20,
+        backgroundColor: '#EDECEC',
         width: RPW(70),
         height: RPH(100),
-        marginBottom: 50,
-        //backgroundColor: 'pink',
+        marginBottom: 20,
         alignItems: 'center',
         justifyContent: 'center',
-
     },
-    
 });
 
 export default SelectLanguage;
